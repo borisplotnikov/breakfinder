@@ -9,10 +9,6 @@ BreakFinder is a React-based web application that detects corruption in uploaded
 ## 🚀 Features
 
 - Drag & drop file uploader
-- Click-to-upload fallback
-- File integrity checking (placeholder / extensible logic)
-- Progress indicator for upload simulation
-- Clean, responsive UI
 
 ---
 
@@ -23,7 +19,7 @@ Follow these steps to run the project locally:
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/breakfinder.git
+git clone https://github.com/borisplotnikov/breakfinder.git
 ```
 
 ### 2. Navigate into the project folder
@@ -61,11 +57,7 @@ http://localhost:5173
 
 The application includes the following UI/asset attributes:
 
-```html
-<a href="https://www.flaticon.com/free-icons/broken" title="broken icons"
-  >Broken icons created by Andrean Prabowo - Flaticon</a
->
-```
+[Broken icons created by Andrean Prabowo - Flaticon](https://www.flaticon.com/free-icons/broken)
 
 ### 📁 Project Structure
 
@@ -88,7 +80,3 @@ Shawn Haney, Anup Manandhar, Boris Plotnikov.
 ### 📄 License
 
 This project is licensed under the MIT License.
-
-###
-
-Favicon attribute: <a href="https://www.flaticon.com/free-icons/broken" title="broken icons">Broken icons created by Andrean Prabowo - Flaticon</a>
