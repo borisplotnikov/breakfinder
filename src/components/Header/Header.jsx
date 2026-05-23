@@ -1,7 +1,9 @@
+import "./Header.css";
+
 export default function Header() {
   return (
     <header className="header">
-      <h1>Breakfinder</h1>
+      <h3>BreakFinder</h3>
     </header>
   );
 }
