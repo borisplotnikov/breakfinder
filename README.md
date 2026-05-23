@@ -55,8 +55,6 @@ http://localhost:5173
 
 ### 🎨 Attributes
 
-The application includes the following UI/asset attributes:
-
 [Broken icons created by Andrean Prabowo - Flaticon](https://www.flaticon.com/free-icons/broken)
 
 ### 📁 Project Structure
