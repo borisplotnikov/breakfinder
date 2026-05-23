@@ -1,5 +1,6 @@
 import DataUploader from "../components/DataUploader";
 import SchemaUploader from "../components/SchemaUploader";
+import TextOutput from "../components/TextOutput";
 
 export default function Home() {
   return (
@@ -7,6 +8,8 @@ export default function Home() {
       <h1>BreakFinder</h1>
       <DataUploader />
       <SchemaUploader />
+      <TextOutput />
     </div>
   );
 }
+
