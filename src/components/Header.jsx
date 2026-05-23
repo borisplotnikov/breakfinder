@@ -17,7 +17,7 @@ export default function Header() {
 
           {/* Application Title */}
           <span className="fw-bold tracking-tight text-white mb-0 h4 ms-1">
-            BreakFinder
+            Reverse-Schema For Parsing
           </span>
         </a>
 

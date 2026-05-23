@@ -6,7 +6,7 @@ export default function Footer() {
         <div className="row mb-2">
           <div className="col">
             <h5 className="fw-bold text-white mb-0">
-              BreakFinder{" "}
+              Reverse-Schema For Parsing{" "}
               <span className="fw-light text-white-50">&copy; 2026</span>
             </h5>
           </div>

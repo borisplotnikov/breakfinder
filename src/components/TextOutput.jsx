@@ -1,14 +1,5 @@
 export default function TextOutput({ content }) {
-  // Example fallback text if no content is provided
-  const defaultText = content || 
-`[INFO] System initialized successfully.
-[INFO] Connecting to BreakFinder core engines...
-[SUCCESS] Connected to cluster-us-east-01.
-[WARN] Latency spike detected: 142ms. Re-routing traffic...
-[INFO] Data stream synchronized.
-[INFO] Ready for file analysis. Please upload a dataset above.
-[INFO] Idle...
-[INFO] Waiting for user input...`;
+  const outputText = content || "[]";
 
   return (
     <div className="container-fluid my-5">
@@ -27,7 +18,7 @@ export default function TextOutput({ content }) {
               </div>
               <button 
                 className="btn btn-sm btn-link text-secondary p-0 text-decoration-none small hover-light"
-                onClick={() => navigator.clipboard.writeText(defaultText)}
+                onClick={() => navigator.clipboard.writeText(outputText)}
                 title="Copy to clipboard"
               >
                 <i className="bi bi-clipboard me-1"></i> Copy
@@ -37,24 +28,25 @@ export default function TextOutput({ content }) {
             {/* Text Output Window */}
             <div className="card-body p-0">
               <pre 
-                className="font-monospace m-0 p-3 bg-black bg-opacity-50 text-success overflow-auto"
+                className="font-monospace m-0 p-3 bg-black bg-opacity-50 overflow-auto"
                 style={{ 
                   height: "280px",       /* Height calibrated for approx 12 lines of text */
                   fontSize: "0.875rem",   /* Standard readable console text sizing */
                   lineHeight: "1.6",
                   whiteSpace: "pre-wrap", /* Wraps long lines nicely instead of breaking layout */
-                  wordBreak: "break-all"
+                  wordBreak: "break-all",
+                  color: "#9fffc2",
                 }}
               >
-                {defaultText}
+                {outputText}
               </pre>
             </div>
 
             {/* Optional Footer/Status line */}
             <div className="card-footer bg-transparent border-top border-secondary border-opacity-25 py-2 px-3 d-flex justify-content-between align-items-center">
-              <span className="small text-muted font-monospace">Lines: {defaultText.split('\n').length}</span>
-              <span className="small text-success-500 font-monospace d-flex align-items-center gap-1">
-                <span className="spinner-grow spinner-grow-sm text-success" role="status" style={{ width: '0.5rem', height: '0.5rem' }}></span>
+              <span className="small text-muted font-monospace">Lines: {outputText.split('\n').length}</span>
+              <span className="small font-monospace d-flex align-items-center gap-1" style={{ color: "#9fffc2" }}>
+                <span className="spinner-grow spinner-grow-sm" role="status" style={{ width: '0.5rem', height: '0.5rem', color: "#9fffc2" }}></span>
                 Live Sync
               </span>
             </div>
