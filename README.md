@@ -1,16 +1,80 @@
-# React + Vite
+# BreakFinder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![React](https://img.shields.io/badge/React-18+-61DAFB?logo=react&logoColor=black)
 
-Currently, two official plugins are available:
+BreakFinder is a React-based web application that detects corruption in uploaded files. Users can drag and drop or select files to analyze their integrity and receive instant feedback on potential file issues.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🚀 Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Drag & drop file uploader
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📦 Getting Started
+
+Follow these steps to run the project locally:
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/borisplotnikov/breakfinder.git
+```
+
+### 2. Navigate into the project folder
+
+```bash
+cd breakfinder
+```
+
+### 3. Install dependencies
+
+```bash
+yarn
+```
+
+### 4. Start development server
+
+```bash
+yarn dev
+```
+
+### The app will run at:
+
+```bash
+http://localhost:5173
+```
+
+### 🛠️ Tech Stack
+
+- React
+- Vite
+- JavaScript (ES6+)
+- CSS3
+
+### 🎨 Attributes
+
+[Broken icons created by Andrean Prabowo - Flaticon](https://www.flaticon.com/free-icons/broken)
+
+### 📁 Project Structure
+
+```bash
+src/
+  components/
+    Uploader/
+    Header/
+    Footer/
+  pages/
+    Home.jsx
+  App.jsx
+  main.jsx
+```
+
+### 🧑‍💻 Authors
+
+Shawn Haney, Anup Manandhar, Boris Plotnikov.
+
+### 📄 License
+
+This project is licensed under the MIT License.
