@@ -1,32 +1,12 @@
 import { useState } from "react";
 
-export default function SchemaUploader() {
+export default function SchemaUploader({ onFileSelect }) {
   const [file, setFile] = useState(null);
   const [isDragging, setIsDragging] = useState(false);
-  const [progress, setProgress] = useState(0);
-  const [isUploading, setIsUploading] = useState(false);
 
   function handleFile(file) {
     setFile(file);
-    setProgress(0);
-  }
-
-  function simulateUpload() {
-    if (!file) return;
-
-    setIsUploading(true);
-    setProgress(0);
-
-    const interval = setInterval(() => {
-      setProgress((prev) => {
-        if (prev >= 100) {
-          clearInterval(interval);
-          setIsUploading(false);
-          return 100;
-        }
-        return prev + 10;
-      });
-    }, 200);
+    onFileSelect?.(file);
   }
 
   function handleDrop(e) {
@@ -75,6 +55,7 @@ export default function SchemaUploader() {
           >
             <input
               type="file"
+              accept=".json,application/json"
               className="position-absolute top-0 start-0 w-100 h-100 opacity-0"
               style={{ cursor: "pointer" }}
               onChange={handleInputChange}
@@ -89,57 +70,10 @@ export default function SchemaUploader() {
             </div>
           </div>
 
-          {/* Shrunk File Info UI with matching Info highlights */}
           {file && (
-            <div className="mt-2 p-2 bg-secondary bg-opacity-10 rounded text-start d-flex align-items-center justify-content-between">
-              <div className="text-truncate me-1" style={{ maxWidth: "110px" }}>
-                <p className="text-muted mb-0" style={{ fontSize: "0.65rem" }}>File</p>
-                <strong className="text-white d-block text-truncate" style={{ fontSize: "0.75rem" }}>{file.name}</strong>
-              </div>
-
-              <button
-                className="btn btn-info btn-sm text-dark flex-shrink-0 py-0 px-2"
-                style={{ fontSize: "0.7rem", fontWeight: "600" }}
-                onClick={simulateUpload}
-                disabled={isUploading}
-              >
-                {isUploading ? (
-                  <>
-                    <span className="spinner-border spinner-border-sm me-1 text-dark" style={{ width: "10px", height: "10px" }} role="status" aria-hidden="true"></span>
-                    ...
-                  </>
-                ) : (
-                  "Upload"
-                )}
-              </button>
-            </div>
-          )}
-
-          {/* Shrunk Progress Bar with matching colors */}
-          {isUploading && (
-            <div className="mt-2">
-              <div className="d-flex justify-content-between align-items-center mb-1" style={{ fontSize: "0.65rem" }}>
-                <span className="text-muted">Processing...</span>
-                <span className="text-info fw-bold">{progress}%</span>
-              </div>
-              <div className="progress" style={{ height: "5px" }}>
-                <div
-                  className="progress-bar progress-bar-striped progress-bar-animated bg-info"
-                  role="progressbar"
-                  style={{ width: `${progress}%` }}
-                  aria-valuenow={progress}
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                />
-              </div>
-            </div>
-          )}
-
-          {/* Shrunk Success Banner */}
-          {!isUploading && progress === 100 && (
-            <div className="mt-2 alert alert-info py-1 px-2 mb-0 text-start d-flex align-items-center text-dark" style={{ fontSize: "0.7rem" }} role="alert">
-              <i className="bi bi-check-circle-fill me-1 text-info"></i>
-              <div>Schema Ready!</div>
+            <div className="mt-2 p-2 bg-secondary bg-opacity-10 rounded text-start">
+              <p className="text-muted mb-0" style={{ fontSize: "0.65rem" }}>File</p>
+              <strong className="text-white d-block text-truncate" style={{ fontSize: "0.75rem" }}>{file.name}</strong>
             </div>
           )}
         </div>
