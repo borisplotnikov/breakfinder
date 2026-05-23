@@ -33,16 +33,19 @@ export default function SchemaUploader({ onFileSelect }) {
   }
 
   return (
-    <div className="container my-5" style={{ maxWidth: "500px" }}>
+    // Max-width shrunk to 250px to match the Data component
+    <div className="container my-2" style={{ maxWidth: "250px" }}>
+      {/* Tweak: Changed card background styling to differentiate it */}
       <div className="card shadow-sm border-0 bg-dark text-light">
-        <div className="card-body p-4 text-center">
-          <h4 className="mb-3 fw-bold">Schema JSON</h4>
+        <div className="card-body p-3 text-center">
+          {/* Header changed to "Upload Your Schema" and scaled down */}
+          <h5 className="mb-2 fw-bold text-info" style={{ fontSize: "0.95rem" }}>Upload Your Schema</h5>
           
-          {/* Drop Zone */}
+          {/* Shrunk Drop Zone with Info/Cyan accent colors */}
           <div
-            className={`p-4 rounded-3 border border-2 text-center position-relative ${
+            className={`p-2 rounded-3 border border-2 text-center position-relative ${
               isDragging 
-                ? "border-primary bg-secondary bg-opacity-25" 
+                ? "border-info bg-info bg-opacity-10" 
                 : "border-secondary border-dashed"
             }`}
             style={{ borderStyle: "dashed", cursor: "pointer", transition: "all 0.2s ease" }}
@@ -50,7 +53,6 @@ export default function SchemaUploader({ onFileSelect }) {
             onDragOver={handleDragOver}
             onDragLeave={handleDragLeave}
           >
-            {/* Hidden actual file input made to cover the drop zone area */}
             <input
               type="file"
               accept=".json,application/json"
@@ -59,20 +61,19 @@ export default function SchemaUploader({ onFileSelect }) {
               onChange={handleInputChange}
             />
             
-            <div className="py-3">
-              <i className="bi bi-cloud-arrow-up fs-1 text-secondary mb-2 d-block"></i>
-              <p className="mb-1 fw-semibold">Drag & drop a file here</p>
-              <p className="text-muted small mb-3">JSON schema description</p>
-              <span className="btn btn-sm btn-outline-light px-3">Select File</span>
+            {/* Tweak: Swapped cloud icon for a schema/code specific icon */}
+            <div className="py-2">
+              <i className="bi bi-file-earmark-code fs-3 text-info mb-1 d-block"></i>
+              <p className="mb-0 small fw-semibold" style={{ fontSize: "0.8rem" }}>Drag & drop schema</p>
+              <p className="text-muted mb-2" style={{ fontSize: "0.7rem" }}>or browse</p>
+              <span className="btn btn-sm btn-outline-info px-2 py-0" style={{ fontSize: "0.7rem" }}>Select</span>
             </div>
           </div>
 
           {file && (
-            <div className="mt-4 p-3 bg-secondary bg-opacity-10 rounded text-start">
-              <div className="text-truncate me-2">
-                <p className="small text-muted mb-0">Selected File</p>
-                <strong className="text-white small text-truncate d-block">{file.name}</strong>
-              </div>
+            <div className="mt-2 p-2 bg-secondary bg-opacity-10 rounded text-start">
+              <p className="text-muted mb-0" style={{ fontSize: "0.65rem" }}>File</p>
+              <strong className="text-white d-block text-truncate" style={{ fontSize: "0.75rem" }}>{file.name}</strong>
             </div>
           )}
         </div>

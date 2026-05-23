@@ -26,14 +26,19 @@ jobs:
       - name: Checkout Source Code
         uses: actions/checkout@v4
 
+      # Sets up Node without forcing the older Yarn v1 cache mechanism
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: "yarn"
 
+      # Activates your specific local version of modern Yarn inside CI
+      - name: Enable Corepack
+        run: corepack enable
+
+      # Uses modern Yarn's exact counterpart to --frozen-lockfile
       - name: Install Dependencies
-        run: yarn install --frozen-lockfile
+        run: yarn install --immutable
 
       - name: Build Application
         run: yarn build

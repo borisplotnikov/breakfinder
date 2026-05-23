@@ -4,8 +4,9 @@ export default function TextOutput({ content }) {
   return (
     <div className="container-fluid my-5">
       <div className="row justify-content-center">
-        {/* Sets the component width to roughly 80% (col-10 out of 12) */}
-        <div className="col-12 col-md-10">
+        
+        {/* CHANGED: Swapped col-md-10 to col-md-6 to occupy exactly 50% width on medium screens and up */}
+        <div className="col-12 col-md-6">
           
           <div className="card shadow-sm border-0 bg-dark text-light">
             {/* Console Header / Tab Bar */}
