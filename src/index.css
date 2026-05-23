@@ -10,20 +10,6 @@ body {
   flex-direction: column;
 }
 
-.header {
-  padding: 16px;
-  background: white;
-  border-bottom: 1px solid #ddd;
-}
-
-.footer {
-  margin-top: auto;
-  padding: 16px;
-  background: white;
-  border-top: 1px solid #ddd;
-  text-align: center;
-}
-
 .content {
   flex: 1;
   padding: 20px;

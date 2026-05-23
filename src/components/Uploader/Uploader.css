@@ -1,0 +1,28 @@
+.uploader {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.drop-zone {
+  width: 320px;
+  padding: 30px;
+  border: 2px dashed #aaa;
+  border-radius: 12px;
+  text-align: center;
+  background: white;
+  transition: 0.2s ease;
+}
+
+.drop-zone.dragging {
+  border-color: #4a90e2;
+  background: #eef6ff;
+}
+
+.drop-zone input {
+  margin-top: 10px;
+}
+
+.file-info {
+  margin-top: 15px;
+}
