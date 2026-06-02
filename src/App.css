@@ -1,0 +1,21 @@
+/* App.css */
+
+/* Target the Output container to ensure it behaves like a true terminal/screen dashboard */
+.row.flex-grow-1 .col-12 {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Ensure the output component expands vertically and manages its own internal scrolling */
+.row.flex-grow-1 .col-12 > div {
+  flex-grow: 1;
+  min-height: 200px; /* Prevents complete layout collapse when empty */
+  overflow-y: auto;
+}
+
+/* Supplemental enforcement for cross-browser flexbox viewport heights on desktop */
+@media (min-width: 768px) {
+  .h-md-100 {
+    height: 100% !important;
+  }
+}
