@@ -1,3 +1,30 @@
-export default function DataUploader() {
-  return <p>DataUploader</p>;
+export default function DataUploader({ onDataUpload }) {
+  const handleFileChange = (event) => {
+    const file = event.target.files[0];
+
+    if (!file) return;
+
+    // Use FileReader to extract the text content from the file
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      const fileText = e.target.result;
+
+      // Send the raw text content back up to App.jsx state
+      onDataUpload(fileText);
+    };
+
+    reader.readAsText(file);
+  };
+
+  return (
+    <div className="data-uploader">
+      <label htmlFor="data-file-input">Upload Data File:</label>
+      <input
+        id="data-file-input"
+        type="file"
+        accept=".json,.xml,.csv,.txt" // Restrict to text/data files
+        onChange={handleFileChange}
+      />
+    </div>
+  );
 }
