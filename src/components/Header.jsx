@@ -4,7 +4,7 @@ export default function Header() {
       <div className="container-fluid">
         <a className="navbar-brand" href="#">
           <img
-            src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo.svg" // Live URL
+            src="corrupted-file.png"
             alt="Logo"
             width="30"
             height="24"

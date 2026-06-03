@@ -33,11 +33,12 @@ body {
 /* Mobile / Vertical layout: Allow vertical scroll only across the whole viewport if content overflows */
 @media (max-width: 767.98px) {
   html,
-  body,
   #root {
+    overflow: hidden; /* Keep wrappers locked */
+  }
+  body {
     overflow-x: hidden;
-    overflow-y: auto;
-    height: auto;
-    min-height: 100vh;
+    overflow-y: auto; /* Let the body handle the vertical scroll */
+    height: 100%;
   }
 }
