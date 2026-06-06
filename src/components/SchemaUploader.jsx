@@ -17,8 +17,10 @@ export default function DataUploader({ onSchemaUpload }) {
   };
 
   return (
-    <div className="data-uploader">
-      <label htmlFor="data-file-input">Upload Schema File:</label>
+    <div className="mb-3 data-uploader">
+      <label htmlFor="data-file-input" className="form-label">
+        Upload Schema File:
+      </label>
       <input
         id="data-file-input"
         type="file"

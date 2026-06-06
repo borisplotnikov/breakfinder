@@ -17,14 +17,17 @@ export default function DataUploader({ onDataUpload }) {
   };
 
   return (
-    <div className="data-uploader">
-      <label htmlFor="data-file-input">Upload Data File:</label>
-      <input
-        id="data-file-input"
-        type="file"
-        accept=".json,.xml,.csv,.txt" // Restrict to text/data files
-        onChange={handleFileChange}
-      />
-    </div>
+    <div 
+    // <div className="mb-3 data-uploader">
+    //   <label htmlFor="data-file-input" className="form-label">
+    //     Upload Data File:
+    //   </label>
+    //   <input
+    //     id="data-file-input"
+    //     type="file"
+    //     accept=".json,.xml,.csv,.txt" // Restrict to text/data files
+    //     onChange={handleFileChange}
+    //   />
+    // </div>
   );
 }

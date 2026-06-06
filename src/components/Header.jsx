@@ -10,7 +10,7 @@ export default function Header() {
             height="24"
             className="d-inline-block align-text-top me-2"
           />
-          Reverse-Schema For Parsing
+          Reverse-Schema for Parsing
         </a>
       </div>
     </nav>

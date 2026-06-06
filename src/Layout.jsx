@@ -1,30 +1,39 @@
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-
-export default function MainLayout({ sidebar, children }) {
+export default function Layout() {
   return (
-    /* 1. Root Layout container: spans full height/width of the locked viewport */
-    <div className="d-flex flex-column h-100 w-100">
-      <Header />
-      {/* 2. Middle Body: Columns on desktop, stacks on mobile. Fills remaining
-      vertical space. */}
-      <div
-        className="d-flex flex-column flex-md-row flex-grow-1 min-hidden-viewport-space"
-        style={{ minHeight: 0 }}
-      >
-        {/* Sidebar Container slot */}
-        <div className="col-12 col-md-3 bg-light border-bottom border-md-end overflow-auto h-md-100">
-          {sidebar}
-        </div>
+    <div className="min-vh-100 d-flex flex-column">
+      <header className="container-fluid">
+        <h2 className="py-2 text-center">Header</h2>
+      </header>
 
-        {/* Workspace Container slot */}
-        <div className="col-12 col-md-9 d-flex flex-column h-md-100 overflow-hidden">
-          <main className="container-fluid py-3 flex-grow-1 d-flex flex-column gap-3 overflow-auto">
-            {children}
-          </main>
+      <main className="container flex-grow-1">
+        <div className="row g-3 mb-3">
+          <section className="col-12 col-md-4">
+            <div>1</div>
+          </section>
+
+          <section className="col-12 col-md-8 d-flex flex-column gap-3">
+            <div className="d-flex gap-3">
+              <div className="w-100">2</div>
+              <div className="w-100">3</div>
+            </div>
+
+            <div className="d-flex gap-3">
+              <div className="w-100">
+                <button className="btn w-100">4</button>
+              </div>
+              <div className="w-100">
+                <button className="btn w-100">5</button>
+              </div>
+            </div>
+
+            <div>6</div>
+          </section>
         </div>
-      </div>
-      <Footer />
+      </main>
+
+      <footer className="container-fluid">
+        <h2 className="py-2 text-center">Footer</h2>
+      </footer>
     </div>
   );
 }

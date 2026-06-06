@@ -1,0 +1,48 @@
+/* index.css */
+
+/* Reset and establish full viewport containment */
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Base body styles matching Bootstrap defaults but locking dimensions */
+body {
+  background-color: #f8f9fa;
+  color: #212529;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Desktop / Horizontal layout: Lock the screen to avoid global scrolling */
+@media (min-width: 768px) {
+  html,
+  body,
+  #root {
+    overflow: hidden;
+  }
+}
+
+/* Mobile / Vertical layout: Allow modern dynamic scrolling */
+@media (max-width: 767.98px) {
+  html,
+  body,
+  #root {
+    /* CHANGED: Removed 'overflow: hidden' from HTML/#root and 'height: 100%' from body.
+       Using min-height ensures the mobile browser address bar doesn't clip content. */
+    height: auto;
+    min-height: 100dvh;
+  }
+
+  body {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+}
