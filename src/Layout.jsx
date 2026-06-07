@@ -1,5 +1,6 @@
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Description from "./components/Description";
 
 export default function Layout() {
   return (
@@ -9,7 +10,7 @@ export default function Layout() {
       <main className="container flex-grow-1">
         <div className="row g-3 mb-3">
           <section className="col-12 col-md-4">
-            <div>1</div>
+            <Description />
           </section>
 
           <section className="col-12 col-md-8 d-flex flex-column gap-3">
