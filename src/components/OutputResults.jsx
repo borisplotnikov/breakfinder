@@ -7,7 +7,7 @@ export default function OutputResults({ results }) {
   ];
 
   return (
-    <div className="output-results-wrapper">
+    <div className="">
       <h5 className="text-center d-block">Results</h5>
       <pre className="border rounded">
         <code>

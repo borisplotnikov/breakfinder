@@ -17,8 +17,8 @@ export default function DataUploader({ onSchemaUpload }) {
   };
 
   return (
-    <div className="mb-3 data-uploader">
-      <label htmlFor="data-file-input" className="form-label">
+    <div className="w-100">
+      <label htmlFor="data-file-input" className="form-label w-100">
         Upload Schema File:
       </label>
       <input
@@ -26,6 +26,7 @@ export default function DataUploader({ onSchemaUpload }) {
         type="file"
         accept=".json,.xml,.csv,.txt" // Restrict to text/data files
         onChange={handleFileChange}
+        className="w-100"
       />
     </div>
   );

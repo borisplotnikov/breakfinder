@@ -3,8 +3,9 @@ export default function MatchButton({ data, schema, onMatchClick }) {
   const isDisabled = !data || !schema;
 
   return (
-    <div className="match-button-container">
+    <div className="w-100">
       <button
+        className="btn w-100"
         type="button"
         onClick={onMatchClick}
         disabled={isDisabled}
