@@ -1,9 +1,10 @@
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+
 export default function Layout() {
   return (
     <div className="min-vh-100 d-flex flex-column">
-      <header className="container-fluid">
-        <h2 className="py-2 text-center">Header</h2>
-      </header>
+      <Header />
 
       <main className="container flex-grow-1">
         <div className="row g-3 mb-3">
@@ -31,9 +32,7 @@ export default function Layout() {
         </div>
       </main>
 
-      <footer className="container-fluid">
-        <h2 className="py-2 text-center">Footer</h2>
-      </footer>
+      <Footer />
     </div>
   );
 }
