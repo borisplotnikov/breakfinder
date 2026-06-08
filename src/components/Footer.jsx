@@ -8,6 +8,13 @@ export default function Footer() {
         <span className="navbar-text d-block w-100">
           Created by Shawn Haney, Anup Manandhar, and Boris Plotnikov.
         </span>
+        <a
+          href="https://www.flaticon.com/free-icons/puzzle"
+          title="puzzle icons"
+          className="navbar-text d-block w-100"
+        >
+          Puzzle icons created by Freepik - Flaticon
+        </a>
       </div>
     </footer>
   );

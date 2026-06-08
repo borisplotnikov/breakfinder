@@ -1,27 +1,26 @@
 export default function Header() {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
-      <div className="container-fluid mx-3">
+      <div className="container-fluid mx-3 ">
         <div className="d-flex">
           <img
-            src="corrupted-file.png"
-            alt="Corrupted file"
-            className="flex-shrink-0 me-2 object-fit-contain"
-            style={{ maxHeight: "60px", height: "auto" }}
+            src="puzzle.png"
+            alt="puzzle icon"
+            className="flex-shrink-0 me-3 object-fit-contain"
+            style={{ maxHeight: "80px", height: "auto" }}
           />
-
-          <div className="d-flex flex-column">
-            <a
-              className="navbar-brand m-0 h1 text-center"
-              href="#"
-              style={{ lineHeight: 1 }}
-            >
-              <h3 className="m-0">Reverse-Schema for Parsing</h3>
-              <small className="navbar-text m-0">
+          <a
+            className="navbar-brand m-0 py-0 h1 text-center"
+            href="#"
+            style={{ lineHeight: 1 }}
+          >
+            <div className="d-flex flex-column pt-2 fs-1">
+              Reverse-Schema for Parsing
+              <small className="navbar-text m-0 pt-1 fs-5">
                 Built at Uhackathon 2026.
               </small>
-            </a>
-          </div>
+            </div>
+          </a>
         </div>
         <button
           className="navbar-toggler ms-auto"
@@ -35,9 +34,9 @@ export default function Header() {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarText">
-          <ul className="navbar-nav ms-auto mb-2 mb-lg-0 d-flex w-100 justify-content-center justify-content-lg-end flex-row">
+          <ul className="navbar-nav gap-lg-4 w-100 justify-content-lg-end">
             <li className="nav-item">
-              <a class="nav-link" href="#">
+              <a className="nav-link" href="#">
                 Repo
               </a>
             </li>
