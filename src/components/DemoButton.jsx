@@ -33,8 +33,12 @@ export default function DemoButton({ setData, setSchema }) {
 
   return (
     <div className="w-100">
-      <button className="btn w-100" type="button" onClick={handleLoadDemo}>
-        Load Demo Data
+      <button
+        className="btn btn-secondary w-100"
+        type="button"
+        onClick={handleLoadDemo}
+      >
+        Run Demo
       </button>
     </div>
   );

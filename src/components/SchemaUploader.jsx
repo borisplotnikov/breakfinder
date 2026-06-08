@@ -51,7 +51,7 @@ export default function DataUploader({ onSchemaUpload }) {
         <input {...getInputProps()} />
 
         <div className="card-body text-center py-5">
-          <i className="bi bi-diagram-3 fs-1 text-primary mb-3 d-block"></i>
+          <i className="bi bi-cloud-arrow-up fs-1 text-primary mb-3 d-block"></i>
 
           <h5 className="mb-2">
             {isDragActive

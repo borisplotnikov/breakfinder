@@ -5,7 +5,7 @@ export default function MatchButton({ data, schema, onMatchClick }) {
   return (
     <div className="w-100">
       <button
-        className="btn w-100"
+        className="btn btn-primary w-100"
         type="button"
         onClick={onMatchClick}
         disabled={isDisabled}
