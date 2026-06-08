@@ -7,7 +7,7 @@ export default function Layout() {
   return (
     <div className="min-vh-100 d-flex flex-column">
       <Header />
-      <main className="container flex-grow-1">
+      <main className="container-fluid flex-grow-1">
         <div className="row g-3 mb-3">
           <Description />
           <DashboardGrid />

@@ -4,8 +4,8 @@ export default function Header() {
       <div className="container-fluid mx-3 ">
         <div className="d-flex">
           <img
-            src="puzzle.png"
-            alt="puzzle icon"
+            src="search.png"
+            alt="search icon"
             className="flex-shrink-0 me-3 object-fit-contain"
             style={{ maxHeight: "80px", height: "auto" }}
           />
@@ -17,7 +17,7 @@ export default function Header() {
             <div className="d-flex flex-column pt-2 fs-1">
               Reverse-Schema for Parsing
               <small className="navbar-text m-0 pt-1 fs-5">
-                Built at Uhackathon 2026.
+                Built at UHackathon 2026.
               </small>
             </div>
           </a>
@@ -47,7 +47,7 @@ export default function Header() {
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">
-                Uhackathon
+                UHackathon
               </a>
             </li>
           </ul>

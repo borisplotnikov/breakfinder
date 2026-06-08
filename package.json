@@ -14,8 +14,10 @@
     "@popperjs/core": "^2.11.8",
     "@tailwindcss/vite": "^4.3.0",
     "bootstrap": "^5.3.8",
+    "bootstrap-icons": "^1.13.1",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
+    "react-dropzone": "^15.0.0",
     "reverse-schema": "^0.1.0",
     "tailwindcss": "^4.3.0"
   },
