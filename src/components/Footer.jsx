@@ -13,7 +13,7 @@ export default function Footer() {
           Reverse-Schema For Parsing &copy; 2026
         </span>
         <span className="navbar-text d-block w-100">
-          Created by Shawn Haney, Boris Plotnikov, and Anup Manandhar.
+          Created by Shaun Haney, Boris Plotnikov, and Anup Manandhar.
         </span>
         <a
           href="https://www.flaticon.com/free-icons/error"
