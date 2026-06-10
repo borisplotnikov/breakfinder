@@ -9,7 +9,7 @@ export default function OutputResults({ results }) {
   return (
     <div className="card h-100">
       <div className="card-header">
-        <h5 className="mb-0">
+        <h5 className="mb-0 text-center">
           Results
           <span className="badge text-bg-success ms-2">
             {results.length} matches

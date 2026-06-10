@@ -32,13 +32,13 @@ export default function DemoButton({ setData, setSchema }) {
   };
 
   return (
-    <div className="w-100">
+    <div className="w-100 py-4 text-center">
       <button
-        className="btn btn-secondary w-100"
+        className="btn btn-secondary w-50"
         type="button"
         onClick={handleLoadDemo}
       >
-        Run Demo
+        See Demo
       </button>
     </div>
   );

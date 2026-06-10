@@ -43,29 +43,13 @@ export default function DataUploader({ onDataUpload }) {
             ? "border-primary bg-primary-subtle"
             : "border-secondary-subtle"
         }`}
-        style={{
-          borderStyle: "dashed",
-          cursor: "pointer",
-        }}
       >
         <input {...getInputProps()} />
 
-        <div className="card-body text-center py-5">
-          <i className="bi bi-cloud-arrow-up fs-1 text-primary mb-3 d-block"></i>
+        <div className="card-body text-center py-0 pb-4">
+          <i className="bi bi-cloud-arrow-up fs-1 text-primary d-block"></i>
 
-          <h5 className="mb-2">
-            {isDragActive
-              ? "Drop your data file here"
-              : "Drag & drop a data file"}
-          </h5>
-
-          <p className="text-body-secondary mb-3">or click to browse</p>
-
-          <div className="btn btn-primary">Choose File</div>
-
-          <small className="d-block text-body-secondary mt-3">
-            Supported formats: JSON, XML, CSV, TXT
-          </small>
+          <div className="btn btn-primary">Upload Data File</div>
         </div>
       </div>
     </div>

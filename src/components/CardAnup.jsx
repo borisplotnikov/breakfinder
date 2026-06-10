@@ -3,7 +3,7 @@ export default function CardAnup() {
     <div className="col-4 d-flex justify-content-center">
       <div className="card h-100 text-center">
         <div
-          className="d-flex justify-content-center align-items-center"
+          className="d-flex justify-content-center"
           style={{ height: "100px" }}
         >
           <img

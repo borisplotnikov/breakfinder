@@ -6,7 +6,7 @@ export default function Header() {
           <img
             src="search.png"
             alt="search icon"
-            className="flex-shrink-0 me-3 object-fit-contain"
+            className="flex-shrink-0 me-4 object-fit-contain"
             style={{ maxHeight: "80px", height: "auto" }}
           />
           <a

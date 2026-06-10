@@ -3,9 +3,9 @@ export default function MatchButton({ data, schema, onMatchClick }) {
   const isDisabled = !data || !schema;
 
   return (
-    <div className="w-100">
+    <div className="w-100 py-4 text-center">
       <button
-        className="btn btn-primary w-100"
+        className="btn btn-primary w-50"
         type="button"
         onClick={onMatchClick}
         disabled={isDisabled}
@@ -15,7 +15,7 @@ export default function MatchButton({ data, schema, onMatchClick }) {
             : "Find structural matches"
         }
       >
-        Run Structural Matching
+        Match Schema
       </button>
     </div>
   );

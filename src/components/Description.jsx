@@ -5,7 +5,9 @@ export default function Description() {
     <section className="col-12 col-md-4">
       <div className="card">
         <div className="card-body">
-          <h5 className="card-title text-center">Reverse-Schema for Parsing</h5>
+          <h5 className="card-title text-center pb-3">
+            Reverse-Schema for Parsing
+          </h5>
           <h6 className="card-subtitle mb-2 text-body-secondary">
             What we've bult:
           </h6>
@@ -24,7 +26,9 @@ export default function Description() {
             How did we do:
           </h6>
           <p className="card-text">6th place out of 12</p>
-          <CardGrid />
+          <div className="card-body">
+            <CardGrid />
+          </div>
         </div>
       </div>
     </section>
