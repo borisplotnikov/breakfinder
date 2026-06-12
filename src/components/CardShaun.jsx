@@ -7,9 +7,9 @@ export default function CardShawn() {
           style={{ height: "100px" }}
         >
           <img
-            src="blank-avatar.jpg"
+            src="shaun.jpeg"
             className="card-img-top pt-3"
-            alt="Boris"
+            alt="Shaun"
             style={{
               height: "100px",
               width: "100px",
