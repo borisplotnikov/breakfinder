@@ -6,7 +6,7 @@ export default function Description() {
       <div className="card">
         <div className="card-body">
           <h5 className="card-title text-center mb-4">
-            Reverse-Schema for Parsing
+            Reverse-Schema for Text Documents
           </h5>
           <h6 className="card-subtitle text-body-secondary">
             What we've bult:

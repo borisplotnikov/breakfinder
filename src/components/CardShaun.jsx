@@ -8,7 +8,7 @@ export default function CardShawn() {
         >
           <img
             src="shaun.jpeg"
-            className="card-img-top pt-3"
+            className="rounded-circle mt-2"
             alt="Shaun"
             style={{
               height: "100px",
@@ -17,18 +17,40 @@ export default function CardShawn() {
             }}
           />
         </div>
-        <div className="card-body">
+        <div className="card-header mt-3">
           <h5 className="card-title">Shawn Haney</h5>
-          <h6 className="card-subtitle mb-2 text-body-secondary">Job</h6>
-          <p className="card-text">Tools</p>
+          <h6 className="card-subtitle text-body-secondary">UX/UI</h6>
         </div>
         <div className="card-body">
-          <a href="#" className="card-link">
-            GitHub
-          </a>
-          <a href="#" className="card-link">
-            LinkedIn
-          </a>
+          <ul className="list-group list-group-flush">
+            <li className="list-group-item">ReactJS</li>
+            <li className="list-group-item">Bootstrap</li>
+            <li className="list-group-item">JavaScript</li>
+          </ul>
+        </div>
+        <div className="card-footer">
+          <ul className="list-group list-group-flush">
+            <li className="list-group-item">
+              <a
+                className="card-link"
+                href="https://github.com/shaunhaney/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub
+              </a>
+            </li>
+            <li className="list-group-item">
+              <a
+                className="card-link"
+                href="https://linkedin.com/in/shaunhaney"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                LinkedIn
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
