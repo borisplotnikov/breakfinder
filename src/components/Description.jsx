@@ -20,7 +20,7 @@ export default function Description() {
             found.
           </p>
           <h6 className="card-subtitle text-body-secondary">How did we do:</h6>
-          <p className="card-text px-3">6th place out of 12</p>
+          <p className="card-text px-3">6th place out of 12.</p>
           <div className="card-body">
             <CardGrid />
           </div>

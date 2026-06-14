@@ -1,14 +1,14 @@
 import { useCallback } from "react";
 import { useDropzone } from "react-dropzone";
 
-export default function SchemaUploader({ onSchemaUpload }) {
+export default function FileUploader({ label, onUpload }) {
   const processFile = (file) => {
     if (!file) return;
 
     const reader = new FileReader();
 
     reader.onload = (e) => {
-      onSchemaUpload(e.target.result);
+      onUpload(e.target.result);
     };
 
     reader.readAsText(file);
@@ -16,10 +16,9 @@ export default function SchemaUploader({ onSchemaUpload }) {
 
   const onDrop = useCallback(
     (acceptedFiles) => {
-      const file = acceptedFiles[0];
-      processFile(file);
+      processFile(acceptedFiles[0]);
     },
-    [onSchemaUpload],
+    [onUpload],
   );
 
   const { getRootProps, getInputProps, isDragActive } = useDropzone({
@@ -49,7 +48,7 @@ export default function SchemaUploader({ onSchemaUpload }) {
         <div className="card-body text-center py-0 pb-4">
           <i className="bi bi-cloud-arrow-up fs-1 text-primary d-block"></i>
 
-          <div className="btn btn-primary">Upload Schema File</div>
+          <div className="btn btn-primary">{label}</div>
         </div>
       </div>
     </div>

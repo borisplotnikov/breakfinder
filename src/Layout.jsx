@@ -3,7 +3,15 @@ import Footer from "./components/Footer";
 import Description from "./components/Description";
 import DashboardGrid from "./DashboardGrid";
 
-export default function Layout() {
+export default function Layout({
+  dataContent,
+  setDataContent,
+  schemaContent,
+  setSchemaContent,
+  matchResults,
+  setMatchResults,
+  handleMatch,
+}) {
   return (
     <div className="min-vh-100 d-flex flex-column">
       <Header />
