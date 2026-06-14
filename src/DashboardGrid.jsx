@@ -1,10 +1,9 @@
 import { useState } from "react";
 
-// import DataUploader from "./components/DataUploader";
-// import SchemaUploader from "./components/SchemaUploader";
 import FileUploader from "./components/FileUploader";
-import DemoButton from "./components/DemoButton";
-import MatchButton from "./components/MatchButton";
+import ActionButton from "./components/ActionButton";
+// import DemoButton from "./components/DemoButton";
+// import MatchButton from "./components/MatchButton";
 import OutputResults from "./components/OutputResults";
 
 export default function DashboardGrid() {
@@ -12,6 +11,7 @@ export default function DashboardGrid() {
   const [schemaContent, setSchemaContent] = useState(null);
   const [matchResults, setMatchResults] = useState([]);
 
+  const handleDemo = () => {};
   const handleMatch = () => {
     if (!dataContent || !schemaContent) {
       alert("Please upload both files first!");
@@ -30,12 +30,28 @@ export default function DashboardGrid() {
       </div>
 
       <div className="d-flex gap-3">
-        <DemoButton setData={setDataContent} setSchema={setSchemaContent} />
+        <ActionButton
+          label="See Demo"
+          variant="secondary"
+          onClick={handleDemo}
+        />
+        <ActionButton
+          label="Match Schema"
+          variant="primary"
+          onClick={handleMatch}
+          disabled={!dataContent || !schemaContent}
+          title={
+            !dataContent || !schemaContent
+              ? "Please upload both data and schema files first"
+              : "Find structural matches"
+          }
+        />
+        {/* <DemoButton setData={setDataContent} setSchema={setSchemaContent} />
         <MatchButton
           data={dataContent}
           schema={schemaContent}
           onMatchClick={handleMatch}
-        />
+        /> */}
       </div>
 
       <OutputResults results={matchResults} />

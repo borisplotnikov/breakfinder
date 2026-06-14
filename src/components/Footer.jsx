@@ -13,9 +13,9 @@ export default function Footer() {
           Reverse-Schema For Text Documents &copy; 2026
         </span>
         <span className="navbar-text d-block w-100 pb-0">
-          Built by Shaun Haney, Boris Plotnikov, and Anup Manandhar.
+          Built by Shaun Haney, Anup Manadhar, and Boris Plotnikov.
         </span>
-        <div className="d-flex justify-content-center align-items-center w-100 gap-3 py-0">
+        <div className="d-flex justify-content-between align-items-center w-100 gap-3 py-0">
           <a
             href="https://www.flaticon.com/free-icons/error"
             title="error icons"
