@@ -13,7 +13,7 @@ export default function Footer() {
           Reverse-Schema For Text Documents &copy; 2026
         </span>
         <span className="navbar-text d-block w-100 pb-0">
-          Built by Shaun Haney, Anup Manadhar, and Boris Plotnikov.
+          Built by Shaun Haney, Anup Manandhar, and Boris Plotnikov.
         </span>
         <div className="d-flex justify-content-between align-items-center w-100 gap-3 py-0">
           <a
