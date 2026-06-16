@@ -1,4 +1,4 @@
-import BusinessCard from "./components/BusinessCard";
+import BusinessCard from "../components/BusinessCard";
 
 export default function CardGrid() {
   return (
@@ -6,16 +6,16 @@ export default function CardGrid() {
       <BusinessCard
         src="shaun.jpeg"
         name="Shaun Haney"
-        contribution="Main Logic"
-        stack={["JavaScript", "ES6"]}
+        contribution="Parser Library"
+        stack={["JavaScript", "Node.js"]}
         github="https://github.com/shaunhaney/"
         linkedIn="https://linkedin.com/in/shaunhaney"
       />
       <BusinessCard
         src="anup.jpg"
         name="Anup Manandhar"
-        contribution="Main Logic"
-        stack={["JavaScript", "ES6"]}
+        contribution="Schema Interface"
+        stack={["JavaScript", "Node.js"]}
         github="https://github.com/anupmanandhar/"
         linkedIn="https://linkedin.com/in/anupmanandhar"
       />

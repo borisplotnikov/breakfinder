@@ -1,4 +1,4 @@
-import CardGrid from "../Cardgrid";
+import CardGrid from "./CardGrid";
 
 export default function Description() {
   return (
