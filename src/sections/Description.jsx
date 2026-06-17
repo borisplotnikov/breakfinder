@@ -2,15 +2,9 @@ import CardGrid from "./CardGrid";
 
 export default function Description() {
   return (
-    <section className="col-12 col-md-4">
+    <section className="col-12 col-md-6">
       <div className="card">
         <div className="card-body">
-          {/* <h5 className="card-title text-center mb-4">
-            Reverse-Schema for Text Documents
-          </h5>
-          <h6 className="card-subtitle text-body-secondary">
-            What we've bult:
-          </h6> */}
           <h3 className="card-title text-center mb-4">The Product.</h3>
           <h6 className="card-subtitle text-body-secondary">What it is:</h6>
           <p className="card-text px-3 mb-4" style={{ textAlign: "justify" }}>

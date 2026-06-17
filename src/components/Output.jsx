@@ -1,6 +1,9 @@
-export default function OutputResults({ results }) {
+import useReverseSchema from "../hooks/useReverseSchema";
+export default function Output() {
+  const { matchResults } = useReverseSchema();
+
   // Dummy results, replace with actual output data.
-  results = [
+  const results = [
     "[MATCH] Target schema found at line 14: 'user_id'",
     "[MATCH] Target schema found at line 45: 'user_id'",
     "[MATCH] Target schema found at line 82: 'user_id'",

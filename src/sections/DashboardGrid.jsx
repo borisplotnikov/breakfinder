@@ -1,15 +1,10 @@
-// import FileUploader from "../components/FileUploader";
 import Buttons from "../components/Buttons";
 import Uploaders from "../components/Uploaders";
-import OutputResults from "../components/OutputResults";
-
-import useReverseSchema from "../hooks/useReverseSchema";
+import Output from "../components/Output";
 
 export default function DashboardGrid() {
-  const { matchResults } = useReverseSchema();
-
   return (
-    <section className="col-12 col-md-8 d-flex flex-column gap-3">
+    <section className="col-12 col-md-6 d-flex flex-column gap-3">
       <h3 className="mt-5 text-center">
         Find a string or text pattern in your text document.
       </h3>
@@ -20,7 +15,7 @@ export default function DashboardGrid() {
       </p>
       <Uploaders />
       <Buttons />
-      <OutputResults results={matchResults} />
+      <Output />
     </section>
   );
 }
