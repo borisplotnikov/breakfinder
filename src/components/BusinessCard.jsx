@@ -7,8 +7,8 @@ export default function BusinessCard({
   linkedIn,
 }) {
   return (
-    <div className="col-4 d-flex justify-content-center">
-      <div className="card h-100 text-center">
+    <div className="col-4 d-flex">
+      <div className="card h-100 w-100 text-center">
         <div
           className="d-flex justify-content-center"
           style={{ height: "100px" }}

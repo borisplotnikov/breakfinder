@@ -8,7 +8,7 @@ function ActionButton({
 }) {
   return (
     <button
-      className={`btn btn-${variant} w-75`}
+      className={`btn btn-${variant} w-75 py-3 fs-4`}
       type="button"
       onClick={onClick}
       disabled={disabled}

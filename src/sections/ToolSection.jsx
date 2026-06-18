@@ -26,14 +26,14 @@ export default function ToolSection() {
         </div>
         <div className="card-body">
           <ul className="list-group list-group-flush">
-            <li className="list-group-item">
+            <li className="list-group-item pb-3">
               <SubHeading />
               <Uploaders />
             </li>
-            <li className="list-group-item py-5">
+            <li className="list-group-item py-3">
               <Buttons />
             </li>
-            <li className="list-group-item">
+            <li className="list-group-item pt-3">
               <Output />
             </li>
           </ul>
