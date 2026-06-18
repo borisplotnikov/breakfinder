@@ -70,11 +70,9 @@ export default function DescriptionSection() {
   return (
     <section className="col-12 col-md-3 d-flex">
       <div className="card">
-        {/* <div className="card-body"> */}
         <div className="card-header">
           <h3 className="card-title text-center">Description</h3>
         </div>
-        {/* </div> */}
         <WhatItIs />
         <HowItWorks />
         <TheResult />
