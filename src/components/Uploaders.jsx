@@ -46,7 +46,7 @@ function Uploader({ label, onUpload }) {
     >
       <input {...getInputProps()} />
 
-      <div className="card-body text-center py-0 pb-4">
+      <div className="card-body text-center">
         <i className="bi bi-cloud-arrow-up fs-1 text-primary d-block"></i>
 
         <div className="btn btn-primary">{label}</div>
@@ -59,12 +59,14 @@ export default function Uploaders() {
   const { handleDataUpload, handleSchemaUpload } = useReverseSchema();
 
   return (
-    <div className="row">
-      <div className="col-6">
-        <Uploader label="Upload Data" onUpload={handleDataUpload} />
-      </div>
-      <div className="col-6">
-        <Uploader label="Upload Schema" onUpload={handleSchemaUpload} />
+    <div className="card-body">
+      <div className="row">
+        <div className="col-6">
+          <Uploader label="Upload Data" onUpload={handleDataUpload} />
+        </div>
+        <div className="col-6">
+          <Uploader label="Upload Schema" onUpload={handleSchemaUpload} />
+        </div>
       </div>
     </div>
   );

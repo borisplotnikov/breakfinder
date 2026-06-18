@@ -10,31 +10,33 @@ export default function Output() {
   ];
 
   return (
-    <div className="card h-100">
-      <div className="card-header">
-        <h5 className="mb-0 text-center">
-          Results
-          <span className="badge text-bg-success ms-2">
-            {results.length} matches
-          </span>
-        </h5>
-      </div>
+    <div className="card-body">
+      <div className="card">
+        <div className="card-header">
+          <h5 className="mb-0 text-center">
+            Results
+            <span className="badge text-bg-success ms-2">
+              {results.length} matches
+            </span>
+          </h5>
+        </div>
 
-      <div
-        className="card-body p-0"
-        style={{ maxHeight: "300px", overflowY: "auto" }}
-      >
-        <ul className="list-group list-group-flush">
-          {results.map((result, index) => (
-            <li
-              key={index}
-              className="list-group-item d-flex align-items-center"
-            >
-              <i className="bi bi-check-circle-fill text-success me-2"></i>
-              <span>{result}</span>
-            </li>
-          ))}
-        </ul>
+        <div
+          className="card-body p-0"
+          style={{ maxHeight: "300px", overflowY: "auto" }}
+        >
+          <ul className="list-group list-group-flush">
+            {results.map((result, index) => (
+              <li
+                key={index}
+                className="list-group-item d-flex align-items-center"
+              >
+                <i className="bi bi-check-circle-fill text-success me-2"></i>
+                <span>{result}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   );

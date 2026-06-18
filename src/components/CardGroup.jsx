@@ -1,6 +1,6 @@
 import BusinessCard from "../components/BusinessCard";
 
-export default function CardGrid() {
+export default function CardGroup() {
   return (
     <div className="row justify-content-center g-3">
       <BusinessCard

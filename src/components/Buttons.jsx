@@ -30,21 +30,23 @@ export default function Buttons() {
   const canFindPattern = dataContent && schemaContent;
 
   return (
-    <div className="row py-4">
-      <div className="col-6 text-center">
-        <ActionButton
-          label="See Demo"
-          variant="secondary"
-          onClick={handleDemo}
-        />
-      </div>
-      <div className="col-6 text-center">
-        <ActionButton
-          label="Find Pattern"
-          variant="primary"
-          onClick={handleMatch}
-          disabled={!canFindPattern}
-        />
+    <div className="card-body">
+      <div className="row">
+        <div className="col-6 text-center">
+          <ActionButton
+            label="See Demo"
+            variant="secondary"
+            onClick={handleDemo}
+          />
+        </div>
+        <div className="col-6 text-center">
+          <ActionButton
+            label="Find Pattern"
+            variant="primary"
+            onClick={handleMatch}
+            disabled={!canFindPattern}
+          />
+        </div>
       </div>
     </div>
   );
