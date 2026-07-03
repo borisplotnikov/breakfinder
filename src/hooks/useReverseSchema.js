@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { parseReverseSchemaText } from "../services/reverseSchema";
+import { parseReverseSchemaText } from "../services/reverseSchemaService";
 
 import demoData from "../assets/demo/demoData.txt?raw";
 import demoSchema from "../assets/demo/demoSchema.json?raw";
