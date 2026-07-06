@@ -1,12 +1,8 @@
 {
   "schema": [
     {
-      "name": "customer",
-      "pattern": "Name: (?<name>.+)"
-    },
-    {
-      "name": "account",
-      "pattern": "Account: (?<accountNumber>\\d+)"
+      "name": "name",
+      "pattern": "^David Lee$"
     }
   ]
 }

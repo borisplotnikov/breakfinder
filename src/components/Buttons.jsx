@@ -1,5 +1,3 @@
-import useReverseSchema from "../hooks/useReverseSchema";
-
 function ActionButton({
   label,
   variant = "primary",
@@ -18,32 +16,26 @@ function ActionButton({
   );
 }
 
-export default function Buttons() {
-  const {
-    dataContent,
-    schemaContent,
-
-    handleDemo,
-    handleMatch,
-  } = useReverseSchema();
-
+export default function Buttons({
+  onDemo,
+  onMatch,
+  dataContent,
+  schemaContent,
+}) {
   const canFindPattern = dataContent && schemaContent;
 
   return (
     <div className="card-body">
       <div className="row">
         <div className="col-6 text-center">
-          <ActionButton
-            label="See Demo"
-            variant="secondary"
-            onClick={handleDemo}
-          />
+          <ActionButton label="See Demo" variant="secondary" onClick={onDemo} />
         </div>
+
         <div className="col-6 text-center">
           <ActionButton
             label="Find Pattern"
             variant="primary"
-            onClick={handleMatch}
+            onClick={onMatch}
             disabled={!canFindPattern}
           />
         </div>

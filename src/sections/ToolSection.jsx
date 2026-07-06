@@ -1,6 +1,7 @@
 import Buttons from "../components/Buttons";
 import Uploaders from "../components/Uploaders";
 import Output from "../components/Output";
+import useReverseSchema from "../hooks/useReverseSchema";
 
 function SubHeading() {
   return (
@@ -16,6 +17,14 @@ function SubHeading() {
 }
 
 export default function ToolSection() {
+  const {
+    matchResults,
+    handleDemo,
+    handleMatch,
+    handleDataUpload,
+    handleSchemaUpload,
+  } = useReverseSchema();
+
   return (
     <section className="col-12 col-md-6 d-flex">
       <div className="card flex-fill">
@@ -24,17 +33,23 @@ export default function ToolSection() {
             Find a string or text pattern in your text document
           </h3>
         </div>
+
         <div className="card-body">
           <ul className="list-group list-group-flush">
             <li className="list-group-item pb-3">
               <SubHeading />
-              <Uploaders />
+              <Uploaders
+                onDataUpload={handleDataUpload}
+                onSchemaUpload={handleSchemaUpload}
+              />
             </li>
+
             <li className="list-group-item py-3">
-              <Buttons />
+              <Buttons onDemo={handleDemo} onMatch={handleMatch} />
             </li>
+
             <li className="list-group-item pt-3">
-              <Output />
+              <Output matchResults={matchResults} />
             </li>
           </ul>
         </div>
