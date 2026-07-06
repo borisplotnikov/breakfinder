@@ -9,9 +9,9 @@ function SubHeading() {
       className="card-text text-body-secondary text-center px-2"
       style={{ textAlign: "justify" }}
     >
-      To see a quick demo just click "See Demo" button. To find a pattern upload
-      any .txt, .xml, .csv, or .json file, upload your schema file and click
-      "Find Pattern" button.
+      To see a quick demo, click the "Demo" button. To search for a pattern,
+      upload your data file (.txt, .xml, .csv, or .json) and your schema file by
+      selecting them or dragging and dropping them into the upload areas.
     </p>
   );
 }
