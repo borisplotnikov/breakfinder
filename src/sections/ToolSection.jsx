@@ -24,9 +24,11 @@ export default function ToolSection() {
     schemaFileName,
 
     matchResults,
+    isDemoActive,
+    canReset,
 
     handleDemo,
-    handleMatch,
+    handleReset,
     handleDataUpload,
     handleSchemaUpload,
   } = useReverseSchema();
@@ -56,7 +58,12 @@ export default function ToolSection() {
             </li>
 
             <li className="list-group-item py-3">
-              <Buttons onDemo={handleDemo} />
+              <Buttons
+                onDemo={handleDemo}
+                onReset={handleReset}
+                isDemoActive={isDemoActive}
+                canReset={canReset}
+              />
             </li>
 
             <li className="list-group-item pt-3">

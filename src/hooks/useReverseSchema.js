@@ -14,6 +14,9 @@ export default function useReverseSchema() {
 
   const [matchResults, setMatchResults] = useState([]);
 
+  const [isDemoActive, setIsDemoActive] = useState(false);
+  const [canReset, setCanReset] = useState(false);
+
   const runMatch = (schema, data) => {
     const results = parseReverseSchemaText(schema, data);
     setMatchResults(results);
@@ -28,6 +31,8 @@ export default function useReverseSchema() {
       setSchemaFileName("demoSchema.json");
 
       runMatch(demoSchema, demoData);
+      setIsDemoActive(true);
+      setCanReset(true);
     } catch (err) {
       console.error(err);
       setMatchResults([]);
@@ -54,15 +59,29 @@ export default function useReverseSchema() {
     setDataContent(content);
     setDataFileName(fileName);
     setMatchResults([]);
+    setCanReset(true);
   };
 
   const handleSchemaUpload = (content, fileName = "") => {
     setSchemaContent(content);
     setSchemaFileName(fileName);
     setMatchResults([]);
+    setCanReset(true);
   };
 
-  // ✅ Safe auto-run only when both files are present
+  const handleReset = () => {
+    setDataContent("");
+    setSchemaContent("");
+
+    setDataFileName("");
+    setSchemaFileName("");
+
+    setMatchResults([]);
+    setIsDemoActive(false);
+    setCanReset(false);
+  };
+
+  // Safe auto-run only when both files are present
   useEffect(() => {
     if (!dataContent || !schemaContent) return;
 
@@ -83,8 +102,12 @@ export default function useReverseSchema() {
 
     matchResults,
 
+    isDemoActive,
+    canReset,
+
     handleDemo,
     handleMatch,
+    handleReset,
 
     handleDataUpload,
     handleSchemaUpload,
