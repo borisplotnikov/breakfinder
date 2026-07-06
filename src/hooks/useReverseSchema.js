@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import { parseReverseSchemaText } from "../services/reverseSchemaService";
 
@@ -8,6 +8,10 @@ import demoSchema from "../assets/demo/demoSchema.json?raw";
 export default function useReverseSchema() {
   const [dataContent, setDataContent] = useState("");
   const [schemaContent, setSchemaContent] = useState("");
+
+  const [dataFileName, setDataFileName] = useState("");
+  const [schemaFileName, setSchemaFileName] = useState("");
+
   const [matchResults, setMatchResults] = useState([]);
 
   const runMatch = (schema, data) => {
@@ -20,9 +24,13 @@ export default function useReverseSchema() {
       setDataContent(demoData);
       setSchemaContent(demoSchema);
 
+      setDataFileName("demoData.txt");
+      setSchemaFileName("demoSchema.json");
+
       runMatch(demoSchema, demoData);
     } catch (err) {
       console.error(err);
+      setMatchResults([]);
       alert("Unable to run demo.");
     }
   };
@@ -37,23 +45,42 @@ export default function useReverseSchema() {
       runMatch(schemaContent, dataContent);
     } catch (err) {
       console.error(err);
+      setMatchResults([]);
       alert("Unable to parse files.");
     }
   };
 
-  const handleDataUpload = (content) => {
+  const handleDataUpload = (content, fileName = "") => {
     setDataContent(content);
+    setDataFileName(fileName);
     setMatchResults([]);
   };
 
-  const handleSchemaUpload = (content) => {
+  const handleSchemaUpload = (content, fileName = "") => {
     setSchemaContent(content);
+    setSchemaFileName(fileName);
     setMatchResults([]);
   };
+
+  // ✅ Safe auto-run only when both files are present
+  useEffect(() => {
+    if (!dataContent || !schemaContent) return;
+
+    try {
+      runMatch(schemaContent, dataContent);
+    } catch (err) {
+      console.error("Auto match failed:", err);
+      setMatchResults([]);
+    }
+  }, [dataContent, schemaContent]);
 
   return {
     dataContent,
     schemaContent,
+
+    dataFileName,
+    schemaFileName,
+
     matchResults,
 
     handleDemo,

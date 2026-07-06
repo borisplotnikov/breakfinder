@@ -18,7 +18,13 @@ function SubHeading() {
 
 export default function ToolSection() {
   const {
+    dataContent,
+    schemaContent,
+    dataFileName,
+    schemaFileName,
+
     matchResults,
+
     handleDemo,
     handleMatch,
     handleDataUpload,
@@ -38,14 +44,19 @@ export default function ToolSection() {
           <ul className="list-group list-group-flush">
             <li className="list-group-item pb-3">
               <SubHeading />
+
               <Uploaders
+                dataContent={dataContent}
+                schemaContent={schemaContent}
+                dataFileName={dataFileName}
+                schemaFileName={schemaFileName}
                 onDataUpload={handleDataUpload}
                 onSchemaUpload={handleSchemaUpload}
               />
             </li>
 
             <li className="list-group-item py-3">
-              <Buttons onDemo={handleDemo} onMatch={handleMatch} />
+              <Buttons onDemo={handleDemo} />
             </li>
 
             <li className="list-group-item pt-3">
