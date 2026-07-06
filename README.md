@@ -2,7 +2,7 @@
 
 ![React](https://img.shields.io/badge/React-18+-61DAFB?logo=react&logoColor=black)
 
-BreakFinder is a React-based web application that detects corruption in uploaded files. Users can drag and drop or select files to analyze their integrity and receive instant feedback on potential file issues.
+Reverse-Schema Matcher is a React-based web application that uses schema-defined patterns to search uploaded files and identify matching records. Users can upload data files and schema files to automatically analyze content, detect specified patterns, and receive organized results.
 
 ---
 
@@ -50,8 +50,8 @@ http://localhost:5173
 
 - React
 - Vite
+- Bootstrap
 - JavaScript (ES6+)
-- CSS3
 
 ### 🎨 Attributes
 

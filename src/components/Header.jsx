@@ -15,7 +15,7 @@ export default function Header() {
             style={{ lineHeight: 1 }}
           >
             <div className="d-flex flex-column pt-2 fs-1">
-              Reverse-Schema for Text Documents
+              Reverse-Schema Matcher
               <small className="navbar-text m-0 pt-1 fs-5">
                 Built at UHackathon 2026.
               </small>

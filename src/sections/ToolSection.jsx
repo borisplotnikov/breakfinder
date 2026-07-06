@@ -37,9 +37,7 @@ export default function ToolSection() {
     <section className="col-12 col-md-6 d-flex">
       <div className="card flex-fill">
         <div className="card-header">
-          <h3 className="card-title text-center">
-            Find a string or text pattern in your text document
-          </h3>
+          <h3 className="card-title text-center">Try it now!</h3>
         </div>
 
         <div className="card-body">

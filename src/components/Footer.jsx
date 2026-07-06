@@ -10,7 +10,7 @@ export default function Footer() {
             className="me-2"
             style={{ height: "1.5em", width: "auto" }}
           />
-          Reverse-Schema For Text Documents &copy; 2026
+          Reverse-Schema Matcher &copy; 2026
         </span>
         <span className="navbar-text d-block w-100 pb-0">
           Built by Shaun Haney, Anup Manandhar, and Boris Plotnikov.
