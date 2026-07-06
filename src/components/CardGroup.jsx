@@ -6,16 +6,16 @@ export default function CardGroup() {
       <BusinessCard
         src="shaun.jpeg"
         name="Shaun Haney"
-        contribution="Parser Library"
-        stack={["JavaScript", "Node.js"]}
+        contribution="App engine"
+        stack={["TypeScript", "JavaScript", "Node.js"]}
         github="https://github.com/shaunhaney/"
         linkedIn="https://linkedin.com/in/shaunhaney"
       />
       <BusinessCard
         src="anup.jpg"
         name="Anup Manandhar"
-        contribution="Schema Interface"
-        stack={["JavaScript", "Node.js"]}
+        contribution="Public interface"
+        stack={["TypeScript", "JavaScript", "Node.js"]}
         github="https://github.com/anupmanandhar/"
         linkedIn="https://linkedin.com/in/anupmanandhar"
       />

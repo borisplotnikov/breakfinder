@@ -1,1 +1,0 @@
-We need to integrate the app engine with UI for the React app that finds schema-based matches in data files. We will review the relevant files and then make it work. Keep in mind the problem most-likely is with some instance mismatch in Output.jsx component. Let me know when you're ready for the first file to review.
