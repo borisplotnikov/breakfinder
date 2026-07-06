@@ -1,9 +1,10 @@
-import { useCallback } from "react";
+import { useCallback, useState } from "react";
 import { useDropzone } from "react-dropzone";
 
-import useReverseSchema from "../hooks/useReverseSchema";
-
 function Uploader({ label, onUpload }) {
+  const [fileName, setFileName] = useState(null);
+  const [uploaded, setUploaded] = useState(false);
+
   const processFile = (file) => {
     if (!file) return;
 
@@ -11,6 +12,9 @@ function Uploader({ label, onUpload }) {
 
     reader.onload = (e) => {
       onUpload(e.target.result);
+
+      setFileName(file.name);
+      setUploaded(true);
     };
 
     reader.readAsText(file);
@@ -18,6 +22,7 @@ function Uploader({ label, onUpload }) {
 
   const onDrop = useCallback(
     (acceptedFiles) => {
+      setUploaded(false);
       processFile(acceptedFiles[0]);
     },
     [onUpload],
@@ -41,31 +46,44 @@ function Uploader({ label, onUpload }) {
       className={`card border-2 ${
         isDragActive
           ? "border-primary bg-primary-subtle"
-          : "border-secondary-subtle"
+          : uploaded
+            ? "border-success bg-success-subtle"
+            : "border-secondary-subtle"
       }`}
     >
       <input {...getInputProps()} />
 
       <div className="card-body text-center">
-        <i className="bi bi-cloud-arrow-up fs-1 text-primary d-block"></i>
+        <i
+          className={`bi fs-1 d-block ${
+            uploaded
+              ? "bi-check-circle-fill text-success"
+              : "bi-cloud-arrow-up text-primary"
+          }`}
+        />
 
         <div className="btn btn-primary">{label}</div>
+
+        {/* 🔥 Always-rendered status line (prevents layout shift) */}
+        <div className="mt-2 small text-muted">
+          {uploaded && fileName
+            ? `Uploaded: ${fileName}`
+            : "No files uploaded yet"}
+        </div>
       </div>
     </div>
   );
 }
 
-export default function Uploaders() {
-  const { handleDataUpload, handleSchemaUpload } = useReverseSchema();
-
+export default function Uploaders({ onDataUpload, onSchemaUpload }) {
   return (
     <div className="card-body">
       <div className="row">
         <div className="col-6">
-          <Uploader label="Upload Data" onUpload={handleDataUpload} />
+          <Uploader label="Upload Data" onUpload={onDataUpload} />
         </div>
         <div className="col-6">
-          <Uploader label="Upload Schema" onUpload={handleSchemaUpload} />
+          <Uploader label="Upload Schema" onUpload={onSchemaUpload} />
         </div>
       </div>
     </div>
