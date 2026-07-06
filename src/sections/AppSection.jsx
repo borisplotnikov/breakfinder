@@ -16,7 +16,7 @@ function SubHeading() {
   );
 }
 
-export default function ToolSection() {
+export default function AppSection() {
   const {
     dataContent,
     schemaContent,
