@@ -31,7 +31,7 @@ cd breakfinder
 ### 3. Install dependencies
 
 ```bash
-yarn
+yarn install
 ```
 
 ### 4. Start development server
