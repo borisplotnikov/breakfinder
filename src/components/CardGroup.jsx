@@ -9,15 +9,15 @@ export default function CardGroup() {
         contribution="App engine"
         stack={["TypeScript", "JavaScript", "Node.js"]}
         github="https://github.com/shaunhaney/"
-        linkedIn="https://linkedin.com/in/shaunhaney"
+        linkedIn="https://linkedin.com/in/shaun-haney-6a1163a6"
       />
       <BusinessCard
         src="anup.jpg"
         name="Anup Manandhar"
         contribution="Public interface"
         stack={["TypeScript", "JavaScript", "Node.js"]}
-        github="https://github.com/anupmanandhar/"
-        linkedIn="https://linkedin.com/in/anupmanandhar"
+        // github="https://github.com/anupmanandhar/"
+        linkedIn="https://linkedin.com/in/anup-manandhar-712292107"
       />
       <BusinessCard
         src="boris.jpg"
